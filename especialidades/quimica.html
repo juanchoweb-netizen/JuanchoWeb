@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Química Industrial - Especialidad Técnica</title>
+    <style>
+        :root {
+    --background: linear-gradient(135deg, #ffffff 0%, #969696 100%);
+    --card-background: #969696;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f7;
+            line-height: 1.5;
+        }
+
+        .header {
+            background: var(--background);
+            padding: 30px 20px 50px;
+            position: relative;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: rgb(44, 44, 44);
+        }
+
+        .back-button::before {
+            content: '←';
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-container {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 12px;
+            margin-right: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .icon {
+            font-size: 48px;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -30px auto 0;
+            padding: 0 20px 30px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card h2::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--card-background);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .profile-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            position: relative;
+            margin-top: 16px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .slide h3 {
+            margin-bottom: 12px;
+            color: var(--card-background);
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--card-background);
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .total-hours {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .disciplina-section {
+            margin-bottom: 16px;
+        }
+
+        .disciplina-title {
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .disciplina-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            background: var(--card-background);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 8px;
+        }
+
+        .subject-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            background: white;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 3px solid var(--card-background);
+        }
+
+        .subject-item:hover {
+            background: #e3f2fd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .subject-name {
+            font-weight: 500;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .subject-hours {
+            background: var(--card-background);
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            gap: 8px;
+        }
+
+        .slider-btn {
+            background: var(--card-background);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .slider-btn:hover {
+            background: #7a7a7a;
+            transform: scale(1.05);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--card-background);
+            transform: scale(1.2);
+        }
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .opportunity-item {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            border-left: 4px solid #969696;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .opportunity-item:hover {
+            background: #e1f5fe;
+            transform: translateX(4px);
+        }
+
+        .opportunity-item::before {
+            content: '•';
+            color: #969696;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 16px;
+            color: var(--background);
+        }
+
+        .info-text {
+            flex: 1;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #1d1d1f;
+            display: block;
+        }
+
+        .info-value {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .details-list {
+            list-style: none;
+        }
+
+        .details-list li {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .details-list li:last-child {
+            border-bottom: none;
+        }
+
+        .details-list li::before {
+            content: '•';
+            color: var(--card-background);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 16px;
+            margin-top: 2px;
+        }
+
+        .detail-content {
+            flex: 1;
+        }
+
+        .detail-title {
+            font-weight: 600;
+            color: #1d1d1f;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        .detail-description {
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .cta-card {
+            background: var(--background);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-card h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .cta-text {
+            margin-bottom: 20px;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .cta-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: -20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .icon-container {
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .opportunities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="#" class="back-button" onclick="goBack()">Volver al inicio</a>
+            <div class="header-content">
+                <img src="../assets/icons/test-tube-empty-svgrepo-com.svg" width="10%" alt=""style="    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    margin-right: 20px;
+    backdrop-filter: blur(10px);">
+                <div class="header-text">
+                    <h1>Química Industrial</h1>
+                    <p>Especialidad Técnica</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="card fade-in">
+                <h2>Descripción de la Especialidad</h2>
+                <p class="description">
+                    La especialidad de Química Industrial forma técnicos en procesos químicos industriales, 
+                    análisis de laboratorio, control de calidad y seguridad industrial. Los estudiantes aprenden 
+                    sobre química orgánica e inorgánica, procesos industriales, técnicas analíticas y tecnologías 
+                    de producción química.
+                </p>
+            </div>
+
+            <div class="card fade-in">
+                <h2>👤 Perfil del Egresado</h2>
+                <p class="profile-description">
+                    El técnico en Química Industrial puede trabajar en laboratorios de análisis, plantas químicas, 
+                    industrias farmacéuticas, empresas de alimentos y control ambiental. Está capacitado para 
+                    realizar análisis químicos, controlar procesos industriales, garantizar la calidad de productos 
+                    y aplicar normas de seguridad e higiene industrial.
+                </p>
+            </div>
+
+            <div class="card fade-in">
+                <h2>Plan de Estudios</h2>
+                <div class="slider-container">
+                    <div class="slider" id="slider">
+                        <!-- 1er Año -->
+                        <div class="slide">
+                            <h3>1° Año <span class="total-hours">Total: 47 horas</span></h3>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Lengua y Literatura</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Lengua Castellana y Literatura</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Guaraní Ne'ẽ</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Lengua Extranjera</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Ciencias Naturales</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Ciencias Naturales y Salud</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Física</span>
+                                        <span class="subject-hours">3h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Matemática</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Matemática</span>
+                                        <span class="subject-hours">5h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Ciencias Sociales</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Historia y Geografía</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Formación Ética y Ciudadana</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Sociología y Antropología Cultural</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Educación Física</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Educación Física</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Desarrollo Personal y Social</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Orientación Educacional y Socio laboral</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Técnica y Tecnológica</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Química (Inorgánica y Orgánica)</span>
+                                        <span class="subject-hours">10h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Dibujo Técnico</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Seguridad e Higiene Industrial</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Recursos Naturales</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Química Práctica</span>
+                                        <span class="subject-hours">3h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 2do Año -->
+                        <div class="slide">
+                            <h3>2° Año <span class="total-hours">Total: 57 horas</span></h3>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Lengua y Literatura</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Lengua Castellana y Literatura</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Guaraní Ne'ẽ</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Lengua Extranjera</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Ciencias Naturales</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Ciencias Naturales y Salud</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Física</span>
+                                        <span class="subject-hours">5h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Matemática</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Matemática</span>
+                                        <span class="subject-hours">5h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Ciencias Sociales</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Historia y Geografía</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Educación para la Seguridad Vial</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Educación Física</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Educación Física</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Técnica y Tecnológica</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Química Analítica (Cualitativa y Cuantitativa)</span>
+                                        <span class="subject-hours">13h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Operaciones Unitarias</span>
+                                        <span class="subject-hours">5h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Físico Química</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Análisis Instrumental</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Taller de servicios Industriales</span>
+                                        <span class="subject-hours">3h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 3er Año -->
+                        <div class="slide">
+                            <h3>3° Año <span class="total-hours">Total: 57 horas</span></h3>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Lengua y Literatura</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Lengua Castellana y Literatura</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Ciencias Naturales</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Ciencias Naturales y Salud</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Matemática</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Matemática</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Ciencias Sociales</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Historia y Geografía</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Economía y Gestión</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Psicología</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Educación Física</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Educación Física</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Desarrollo Personal y Social</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Orientación Educacional y Socio laboral</span>
+                                        <span class="subject-hours">2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Técnica y Tecnológica</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Proyecto Industrial</span>
+                                        <span class="subject-hours">3h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Tecnología y sus Energías</span>
+                                        <span class="subject-hours">8h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Microbiología Industrial</span>
+                                        <span class="subject-hours">4h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Tecnología y Análisis de los Alimentos</span>
+                                        <span class="subject-hours">10h</span>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span class="subject-name">Análisis Industrial</span>
+                                        <span class="subject-hours">7h</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="disciplina-section">
+                                <div class="disciplina-title">Plan Optativo</div>
+                                <div class="subject-grid">
+                                    <div class="subject-item">
+                                        <span class="subject-name">Materias Optativas</span>
+                                        <span class="subject-hours">5h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" id="prevBtn">‹</button>
+                        <button class="slider-btn" id="nextBtn">›</button>
+                    </div>
+                    <div class="slider-dots" id="sliderDots">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card fade-in">
+                <h2>🔧 Habilidades Técnicas</h2>
+                <div class="opportunities-grid">
+                    <div class="opportunity-item">Efectúa análisis físico-químicos buscando perfeccionar la elaboración de un producto determinado.</div>
+                    <div class="opportunity-item">Realiza proyectos industriales, efectuando cálculos de presupuestos concernientes a costo de materia prima, costo de producción, costo de instalaciones edilicias y rentabilidad.</div>
+                    <div class="opportunity-item">Calcula carga eléctrica de máquinas e instrumentos utilizados en las diferentes operaciones unitarias.</div>
+                    <div class="opportunity-item">Lee e interpreta proyectos de industrias químicas.</div>
+                    <div class="opportunity-item">Diagrama procesos de fabricación.</div>
+                    <div class="opportunity-item">Calcula el rendimiento de la producción de las máquinas o equipos que intervienen en el proceso.</div>
+                    <div class="opportunity-item">Cuida su seguridad y la de los demás durante la realización de las tareas profesionales.</div>
+                    <div class="opportunity-item">Efectúa control de calidad de materia prima y productos acabados, mediante análisis industriales ajustados a normas.</div>
+                    <div class="opportunity-item">Realiza asistencia técnica en la compra, venta y utilización de productos químicos para determinados procesos industriales.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="info-card fade-in" style="text-align: center;">
+                <h3>Docente Técnico de Area</h3>
+                <div class="info-item">
+                    <!-- Aquí iría la foto del docente -->
+                     <div class="info-text" style="text-align: center;">
+                        <div style="width: 150px; height: 150px; background-color: #f0f0f0; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/juancho web 2.1/Foto (8 de 37).webp" width="100%" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <h2>Carlos Isfram</h2>
+
+            <div class="info-card fade-in">
+                <h3>Detalles de la Especialidad</h3>
+                <ul class="details-list">
+                    <li>
+                        <div class="detail-content">
+                            <span class="detail-title">Duración</span>
+                            <span class="detail-description">3 años de formación técnica especializada</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="detail-content">
+                            <span class="detail-title">Modalidad</span>
+                            <span class="detail-description">Presencial con prácticas en laboratorios especializados</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="detail-content">
+                            <span class="detail-title">Certificación</span>
+                            <span class="detail-description">Título de Técnico en Química Industrial con validez nacional</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="detail-content">
+                            <span class="detail-title">Enfoque</span>
+                            <span class="detail-description">Formación práctica en análisis químico y procesos industriales</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="detail-content">
+                            <span class="detail-title">Laboratorios</span>
+                            <span class="detail-description">Equipados con tecnología actualizada para prácticas reales</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-card cta-card fade-in">
+                <h3>¿Interesado en esta especialidad?</h3>
+                <p class="cta-text">
+                    Contáctanos para más información sobre el proceso de admisión.
+                </p>
+                <a href="#" class="cta-button" onclick="showContactInfo()">Más Información</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+          window.location.href = '../index.html'
+        }
+
+        function showContactInfo() {
+            alert('📞 Información de Contacto:\n\n' +
+                  '📧 Email: admisiones@institucion.edu\n' +
+                  '📱 Teléfono: +595 XXX XXX XXX\n' +
+                  '🏢 Dirección: Ciudad del Este, Paraguay\n' +
+                  '🕐 Horario: Lunes a Viernes 8:00-17:00');
+        }
+
+        // Slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const sliderDots = document.getElementById('sliderDots');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Create dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                sliderDots.appendChild(dot);
+            }
+            
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                document.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+                updateSlider();
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+            
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Auto-advance slides every 5 seconds
+            setInterval(nextSlide, 5000);
+            
+            // Aplicar animaciones cuando la página carga
+            const cards = document.querySelectorAll('.card, .info-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Efectos adicionales para interactividad
+        document.querySelectorAll('.subject-item, .opportunity-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

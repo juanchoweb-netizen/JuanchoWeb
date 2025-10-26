@@ -1,0 +1,144 @@
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            padding: 40px 30px;
+            color: rgb(0, 0, 0);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .card:hover .card-header::before {
+            opacity: 1;
+            right: -30%;
+        }
+
+        .electricidad { background: linear-gradient(135deg, rgb(6, 182, 212) 0%, #35c6ff 100%); }
+        .electronica { background: linear-gradient(135deg, rgb(107, 114, 128) 0%, rgb(107, 114, 128) 100%); }
+        .mecanica { background: linear-gradient(135deg, rgb(30, 58, 138) 0%, #2f2f3c 100%); }
+        .informatica { background: linear-gradient(135deg, rgb(234, 179, 8) 0%,rgb(245 158 11)100%); }
+        .quimica { background: linear-gradient(135deg, #ffffff 0%, #969696 100%); }
+        .formacion { background: linear-gradient(135deg, #da8f17 0%, rgb(217, 119, 6) 100%); }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .card-link {
+            color: #f5a425;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover {
+            transform: translateX(5px);
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-link:hover::after {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card-header {
+                padding: 30px 25px;
+            }
+            
+            .card-body {
+                padding: 25px;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }

@@ -1,0 +1,1059 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+                .gallery-caption {
+                  text-align: center;
+                }
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <title>JUANCHO WEB</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/contamos.css">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.NJgGN_yGIWM.L.W.O/am=AAY/d=0/rs=AN8SPfrTSMIvWAFISYN4u74dPJrX0HgUsw/m=el_main_css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+    <style>
+      @media screen and (max-width: 1250px) {
+        .main-header .logo {
+            padding-left: 0px !important;
+          }
+        }
+    </style>
+  </head>
+  <link href="assets/css/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root { 
+      --color: #6f3f03;
+      --color2: #6d5f06;
+    }
+    .italic{
+      color: #fff;
+    }
+    .font-semibold{color: #fff;}
+    .carousel {
+      transition: transform 0.5s ease-in-out;
+    }
+    .object-cover {
+        width: 35%;
+        height: 100%;
+    }
+    .gap-4{
+      width: 100%;
+      position: relative; 
+      margin-top: 0px;
+      padding-top: 0px;
+      overflow: hidden;
+    }
+    /* Estilos para el modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 0;
+      border: none;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: slideIn 0.3s;
+    }
+    @keyframes slideIn {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    .modal-header {
+      background: linear-gradient(135deg, var(--color) 0%, var(--color2) 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+    }
+    .modal-body {
+      padding: 20px;
+    }
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .close:hover,
+    .close:focus {
+      opacity: 0.7;
+    }
+    .ver-mas-btn {
+      background: linear-gradient(135deg, var(--color) 0%, var(--color2) 100%);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .ver-mas-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px var(--color);
+    }
+    .event-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .detail-card {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--color);
+    }
+    .detail-title {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .participants-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .participant-tag {
+      background: var(--color);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    /* Estilos para la nueva galería simple con CSS Grid */
+    .container-img{
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 250px;
+        grid-gap: 20px;
+    }
+    .container-img .box-img figure{
+        width: 100%;
+        height: 100%;
+    }
+    .container-img .box-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .container-img .box-img img:hover {
+        transform: scale(1.03);
+    }
+    .container-img .box-img:nth-child(1){
+        grid-column-start: span 2;
+    }
+    .container-img .box-img:nth-child(4){
+        grid-row-start: span 2;
+    }
+    @media screen and (max-width:800px){
+        .container-img{
+            width: 95%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            grid-template-rows: 200px;
+        }
+        .container-img .box-img:nth-child(1){
+            grid-column-start: span 1;
+        }
+    }
+    @media screen and (max-width:500px){
+        .container-img{
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .container-img .box-img img{
+            height: 200px;
+        }
+    }
+    /* Modal para la galería */
+    .gallery-modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s;
+    }
+    .gallery-modal-content {
+      position: relative;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+      height: 90vh;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: zoomIn 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes zoomIn {
+      from {transform: translateY(-50%) scale(0.7);}
+      to {transform: translateY(-50%) scale(1);}
+    }
+    .gallery-modal-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .gallery-close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2001;
+    }
+    .gallery-close:hover {
+      color: #bbb;
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      padding: 30px 20px 20px;
+      border-radius: 0 0 8px 8px;
+    }
+    .gallery-caption h4 {
+      margin: 0 0 5px 0;
+      font-size: 20px;
+    }
+    .gallery-caption p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+      .gallery-item img {
+        height: 200px;
+      }
+      .gallery-close {
+        top: 5px;
+        right: 25px;
+        font-size: 30px;
+      }
+    }
+  </style>
+  </head>
+<body> 
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="index.html" class="external"><em>JUANCHO</em> WEB</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="index.html"  class="external">INICIO</a></li>
+        <li><a href="about.html"  class="external">Historia</a></li>
+        <li><a href="formacion.html" class="external">FORMACION</a>
+        </li>
+        <li><a href="events.html">EVENTOS</a></li>
+        <li><a href="matricula.html" class="external">MATRICULACIÓN</a></li>
+        <li><a href="http://localhost:3000/login"  class="external">REGISTRARSE</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+            <img style="height: 51vh; width: 100%; object-fit: cover;" src="assets/images/Eventos.webp" alt="event Image" >
+
+      <div class="video-overlay header-text" style="height: 100%;">
+          <div class="caption">
+              <h2><br>EVENTOS</h2>
+              <h6>"Mira los eventos del colegio"</h6>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+<main class="main">
+    <!-- Events 2 Section -->
+    <section id="events-2" class="events-2 section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="g-4">
+          <div class="col-lg-8" style="max-width: 100% !important;">
+            <div class="events-list">
+              <!-- Evento 1 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300" height="200" src="assets/images/el mejor Colegio de la Galaxia.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Inter Juancho - Aniversario del colegio</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> Entre el 1 y 5 de abril</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Celebramos el aniversario de nuestro querido colegio con competencias deportivas, actividades culturales y mucha diversión para toda la comunidad educativa.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal1')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">1-5</span>
+                  <span class="month">ABR</span>
+                </div>
+              </div>
+              <!-- Evento 2 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300" height="200" src="assets/images/Como no quererte.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Elecciones para el Centro de Estudiantes</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 15 de marzo</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Los estudiantes ejercen su derecho al voto para elegir a sus representantes en el Centro de Estudiantes para el período lectivo 2025.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal2')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">15</span>
+                  <span class="month">MAR</span>
+                </div>
+              </div>
+              <!-- Evento 3 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300" height="200" src="assets/images/jeen.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Torneos Estudiantiles - Jeens</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 20 de abril</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Competencias deportivas donde los estudiantes demuestran sus habilidades en fútbol, básquet, vóley y otros deportes en un ambiente de sana competencia.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal3')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">20</span>
+                  <span class="month">ABR</span>
+                </div>
+              </div>
+              <!-- Evento 4 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300" height="200" src="assets/images/Feria.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Feria de Emprendedores (3° Año de Bachillerato)</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 10 de mayo</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Los estudiantes de tercer año presentan sus proyectos de emprendimiento, mostrando innovación y creatividad en sus propuestas de negocio.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal4')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">10</span>
+                  <span class="month">MAY</span>
+                </div>
+              </div>
+              <!-- Evento 6 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300" height="200" src="assets/images/SanJuan.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Festival de San Juan</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 21 de septiembre</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Celebración especial dedicada a los jóvenes con actividades culturales, musicales y recreativas que resaltan el talento estudiantil.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal6')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">24</span>
+                  <span class="month">Jun</span>
+                </div>
+              </div>
+              <!-- Evento 5 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300px" height="200px" src="assets/images/día de la juventud 2022.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Festejo del Día de la Juventud</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 21 de septiembre</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Celebración especial dedicada a los jóvenes con actividades culturales, musicales y recreativas que resaltan el talento estudiantil.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal5')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">21</span>
+                  <span class="month">SEP</span>
+                </div>
+              </div>
+              
+              <!-- Evento 7 -->
+              <div class="event-item" data-aos="fade-up">
+                <img loading="lazy" decoding="async" width="300" height="200" src="assets/images/Expotec.webp"  alt="A supporting image for the event" bates_events="1" >
+                <div class="event-content">
+                  <h3>Feria de Expotec</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 30 de agosto</p>
+                    <p><i class="bi bi-geo-alt"></i> Ubicación: JUAN XXIII</p>
+                  </div>
+                  <p>Espectáculo nocturno donde los estudiantes muestran sus talentos artísticos: música, danza, teatro y otras expresiones culturales.</p>
+                  <button class="ver-mas-btn" onclick="openModal('modal7')">Ver más</button>
+                </div>
+                <div class="event-date">
+                  <span class="day">30</span>
+                  <span class="month">AGO</span>
+                </div>
+              </div>
+            </div>
+            <!-- Título de la Galería -->
+            <div class="gallery-title-section" style="text-align: center; margin: 80px 0 60px 0; padding: 40px 20px; background-image: radial-gradient(circle farthest-corner at 10% 0%, #fffffe, #ffa441 45%); border-radius: 15px; color: white;">
+              <h2 style="font-size: 42px; margin-bottom: 15px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Galería de Fotos</h2>
+              <p style="font-size: 20px; margin: 0; opacity: 0.9;">Revive los mejores momentos de nuestros eventos escolares</p>
+            </div>
+              <!-- Primera Galería -->
+  <div class="container-img">
+      <div class="box-img" onclick="openGalleryModal('assets/images/img1.webp', 'Miss y Mister Juancho - Candidatos 2025')">
+          <figure>
+              <img src="assets/images/img1.webp" alt="Miss y Mister Juancho - Candidatos" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/img2.webp', 'Miss y Mister Juancho - Desfile de Traje de Gala')">
+          <figure>
+              <img src="assets/images/img2.webp" alt="Miss y Mister Juancho - Desfile" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/img3.webp', 'Miss y Mister Juancho - Ronda de Talentos')">
+          <figure>
+              <img src="assets/images/img3.webp" alt="Miss y Mister Juancho - Talentos" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/img4.webp', 'Miss y Mister Juancho - Ronda de Preguntas')">
+          <figure>
+              <img style="width: 100%;" src="assets/images/img4.webp" alt="Miss y Mister Juancho - Preguntas" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/img5.webp', 'Miss y Mister Juancho - Ganadores 2025')">
+          <figure>
+              <img src="assets/images/img5.webp" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/img6.webp', 'Miss y Mister Juancho - Fotografía Grupal')">
+          <figure>
+              <img src="assets/images/img6.webp" alt="Miss y Mister Juancho - Grupal" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/img7.webp', 'Miss y Mister Juancho - Celebración')">
+          <figure>
+              <img src="assets/images/img7.webp" alt="Miss y Mister Juancho - Celebración" loading="lazy">
+          </figure>
+      </div>
+  </div>
+  <!-- Segunda Galería (duplicada) -->
+  <div class="container-img">
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025 (1).webp', 'Día de la Juventud - Actividades Deportivas')">
+          <figure>
+              <img src="assets/images/Spring party Juancho 2025 (1).webp" alt="Día de la Juventud - Deportes" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025 (2).webp', 'Día de la Juventud - Presentación Cultural')">
+          <figure>
+              <img src="assets/images/Spring party Juancho 2025 (2).webp" alt="Día de la Juventud - Cultura" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025 (3).webp', 'Día de la Juventud - Juegos Tradicionales')">
+          <figure>
+              <img src="assets/images/Spring party Juancho 2025 (3).webp" alt="Día de la Juventud - Juegos" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025 (4).webp', 'Día de la Juventud - Concierto Estudiantil')">
+          <figure>
+              <img style="width: 100%;" src="assets/images/Spring party Juancho 2025 (4).webp" alt="Día de la Juventud - Concierto" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025 (5).webp', 'Día de la Juventud - Feria Gastronómica')">
+          <figure>
+              <img src="assets/images/Spring party Juancho 2025 (5).webp" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025.webp', 'Día de la Juventud - Ceremonia de Apertura')">
+          <figure>
+              <img src="assets/images/Spring party Juancho 2025.webp" alt="Día de la Juventud - Apertura" loading="lazy">
+          </figure>
+      </div>
+      <div class="box-img" onclick="openGalleryModal('assets/images/Spring party Juancho 2025(0).webp', 'Día de la Juventud - Clausura')">
+          <figure>
+              <img src="assets/images/Spring party Juancho 2025(0).webp" alt="Día de la Juventud - Clausura" loading="lazy">
+          </figure>
+      </div>
+  </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+<!-- Modales para cada evento -->
+<!-- Modal 1 - Inter Juancho -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Inter Juancho - Aniversario del colegio</h2>
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/el mejor Colegio de la Galaxia.webp"width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">📅 Fechas y Horarios</div>
+          <p><strong>Fecha:</strong> Del 1 al 5 de abril de 2025</p>
+          <p><strong>Horario:</strong> 8:00 AM - 6:00 PM</p>
+          <p><strong>Ceremonia de Apertura:</strong> 1 de abril a las 9:00 AM</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🏆 Actividades Programadas</div>
+          <ul>
+            <li>Competencias deportivas (fútbol, básquet, vóley)</li>
+            <li>Concursos culturales y artísticos</li>
+            <li>Exposiciones estudiantiles</li>
+            <li>Festival gastronómico</li>
+            <li>Show de talentos</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">👥 Participantes</div>
+          <p>Todos los cursos desde 1° básico hasta 3° bachillerato</p>
+          <div class="participants-list">
+            <span class="participant-tag">1° Básico</span>
+            <span class="participant-tag">2° Básico</span>
+            <span class="participant-tag">3° Básico</span>
+            <span class="participant-tag">1° Bach.</span>
+            <span class="participant-tag">2° Bach.</span>
+            <span class="participant-tag">3° Bach.</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🎯 Objetivos</div>
+          <ul>
+            <li>Fortalecer el espíritu de comunidad educativa</li>
+            <li>Promover la sana competencia</li>
+            <li>Desarrollar talentos estudiantiles</li>
+            <li>Celebrar la historia del colegio</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Modal 2 - Elecciones Centro Estudiantes -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Elecciones para el Centro de Estudiantes</h2>
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/Como no quererte.webp" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">🗳️ Información Electoral</div>
+          <p><strong>Fecha:</strong> 15 de marzo de 2025</p>
+          <p><strong>Horario de Votación:</strong> 8:00 AM - 4:00 PM</p>
+          <p><strong>Lugar:</strong> Aula Magna - Colegio Juan XXIII</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">👤 Candidatos</div>
+          <ul>
+            <li><strong>Lista Azul:</strong> Ana Pérez (Presidenta) - Carlos Ruiz (Vicepresidente)</li>
+            <li><strong>Lista Roja:</strong> José Martínez (Presidente) - Lucía Fernández (Vicepresidenta)</li>
+            <li><strong>Lista Verde:</strong> Pedro González (Presidente) - Sofía López (Vicepresidenta)</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">📋 Requisitos para Votar</div>
+          <ul>
+            <li>Ser estudiante activo del colegio</li>
+            <li>Presentar carnet estudiantil</li>
+            <li>Estar en los registros electorales</li>
+            <li>No haber votado anteriormente</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🎯 Propuestas Principales</div>
+          <ul>
+            <li>Mejora de instalaciones deportivas</li>
+            <li>Programas de apoyo académico</li>
+            <li>Actividades recreativas mensuales</li>
+            <li>Representación estudiantil en decisiones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 3 - Torneos Estudiantiles -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Torneos Estudiantiles - Jeens</h2>
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/jeen.webp" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">⚽ Deportes Incluidos</div>
+          <ul>
+            <li>Fútbol masculino y femenino</li>
+            <li>Básquetbol</li>
+            <li>Vóleibol</li>
+            <li>Ping pong</li>
+            <li>Atletismo</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">📅 Cronograma</div>
+          <p><strong>Inscripciones:</strong> Hasta el 15 de abril</p>
+          <p><strong>Eliminatorias:</strong> 20-22 de abril</p>
+          <p><strong>Semifinales:</strong> 25 de abril</p>
+          <p><strong>Finales:</strong> 27 de abril</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🏆 Premios</div>
+          <ul>
+            <li>Trofeos para equipos ganadores</li>
+            <li>Medallas individuales</li>
+            <li>Certificados de participación</li>
+            <li>Reconocimiento en acto público</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">📝 Inscripciones</div>
+          <p>Dirigirse a la Coordinación Deportiva</p>
+          <p><strong>Encargado:</strong> Prof. Roberto Silva</p>
+          <p><strong>Costo:</strong> Gratuito</p>
+          <p><strong>Requisito:</strong> Certificado médico</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 4 - Feria de Emprendedores -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Feria de Emprendedores (3° Año de Bachillerato)</h2>
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/Feria.webp" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">💡 Categorías de Proyectos</div>
+          <ul>
+            <li>Tecnología e Innovación</li>
+            <li>Servicios Comunitarios</li>
+            <li>Productos Artesanales</li>
+            <li>Gastronomía</li>
+            <li>Sustentabilidad Ambiental</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🏆 Criterios de Evaluación</div>
+          <ul>
+            <li>Originalidad e innovación (25%)</li>
+            <li>Viabilidad del proyecto (25%)</li>
+            <li>Presentación y comunicación (25%)</li>
+            <li>Impacto social/ambiental (25%)</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">👨‍🎓 Jurado Evaluador</div>
+          <ul>
+            <li>Empresarios locales</li>
+            <li>Profesores especialistas</li>
+            <li>Representantes de cámara de comercio</li>
+            <li>Ex alumnos emprendedores</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">Organizadora/Fundadora del evento</div>
+          <ul>
+            <img style="width: 50%; height: 50%;" src="assets/images/equipo/Lisa.webp" alt="">
+            <li>Abg. Lisa Ibarra</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 5 - Día de la Juventud -->
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Festejo del Día de la Juventud</h2>
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/día de la juventud 2022.webp" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">🎭 Actividades Programadas</div>
+          <ul>
+            <li>Concierto de bandas estudiantiles</li>
+            <li>Concurso de danza</li>
+            <li>Teatro estudiantil</li>
+            <li>Feria gastronómica</li>
+            <li>Juegos tradicionales</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🎵 Artistas Invitados</div>
+          <ul>
+            <li>Banda local "Los Jóvenes"</li>
+            <li>Grupo de danza contemporánea</li>
+            <li>DJ estudiantil</li>
+            <li>Coro del colegio</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🍕 Zona Gastronómica</div>
+          <ul>
+            <li>Food trucks variados</li>
+            <li>Puestos de estudiantes</li>
+            <li>Bebidas refrescantes</li>
+            <li>Postres y dulces tradicionales</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🎯 Horario del Evento</div>
+          <p><strong>14:00 - 15:30:</strong> Inauguración y presentaciones</p>
+          <p><strong>15:30 - 17:00:</strong> Concursos y juegos</p>
+          <p><strong>17:00 - 18:30:</strong> Concierto principal</p>
+          <p><strong>18:30 - 20:00:</strong> Cierre y confraternidad</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 6 - Festival de Ciencias -->
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Festival de San Juan</h2>
+      <span class="close" onclick="closeModal('modal6')">&times;</span>      
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/SanJuan.webp" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">🔬 Áreas de Investigac  ión</div>
+          <ul>
+            <li>Física y Química experimental</li>
+            <li>Biología y Medio Ambiente</li>
+            <li>Matemáticas aplicadas</li>
+            <li>Tecnología e Informática</li>
+            <li>Ciencias Sociales</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🏆 Modalidades de Participación</div>
+          <ul>
+            <li>Proyectos individuales</li>
+            <li>Proyectos grupales (máx. 4 integrantes)</li>
+            <li>Demostraciones experimentales</li>
+            <li>Pósters científicos</li>
+            <li>Presentaciones orales</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">👨‍🔬 Invitados Especiales</div>
+          <ul>
+            <li>Dr. Juan Mendoza - Universidad Nacional</li>
+            <li>Ing. María Rodríguez - CONACYT</li>
+            <li>Científicos del Instituto Nacional</li>
+            <li>Estudiantes universitarios mentores</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🎁 Reconocimientos</div>
+          <ul>
+            <li>Mejor proyecto por categoría</li>
+            <li>Premio a la innovación</li>
+            <li>Reconocimiento al impacto social</li>
+            <li>Becas para programas científicos</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 20px; padding: 15px; background: #f0f8f0; border-radius: 8px;">
+        <h4>Requisitos de Ingreso</h4>
+        <ul>
+          <li>Pagar entrada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 7 - Noche de Talentos -->
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Expotec</h2>
+      <span class="close" onclick="closeModal('modal7')">&times;</span>
+    </div>
+    <div class="modal-body">
+      <img src="assets/images/Expotec.webp" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+      <div class="event-details">
+        <div class="detail-card">
+          <div class="detail-title">🎭 Categorías de Participación</div>
+          <ul>
+            <li>Canto individual y grupal</li>
+            <li>Danza y coreografías</li>
+            <li>Teatro y actuación</li>
+            <li>Instrumentos musicales</li>
+            <li>Stand-up y humor</li>
+            <li>Artes visuales en vivo</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">⏰ Programa de la Noche</div>
+          <p><strong>18:00:</strong> Apertura de puertas</p>
+          <p><strong>18:30:</strong> Bienvenida y presentación</p>
+          <p><strong>19:00:</strong> Primera ronda de presentaciones</p>
+          <p><strong>20:30:</strong> Intermedio y refrigerio</p>
+          <p><strong>21:00:</strong> Segunda ronda</p>
+          <p><strong>22:00:</strong> Premiación y cierre</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">👥 Jurado Calificador</div>
+          <ul>
+            <li>Artistas locales reconocidos</li>
+            <li>Profesores de arte y música</li>
+            <li>Representantes de medios</li>
+            <li>Director del colegio</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <div class="detail-title">🏆 Premios y Reconocimientos</div>
+          <ul>
+            <li>1er lugar: Trofeo + Gs. 500.000</li>
+            <li>2do lugar: Medalla + Gs. 300.000</li>
+            <li>3er lugar: Certificado + Gs. 200.000</li>
+            <li>Premio del público</li>
+            <li>Reconocimiento especial por categoría</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Modal para la galería -->
+<div id="galleryModal" class="gallery-modal">
+  <div class="gallery-modal-content">
+  <span class="gallery-close" onclick="closeGalleryModal()">&times;</span>
+    <img id="galleryModalImg" src="" alt="">
+    <div class="gallery-caption">
+      <h4 id="galleryModalTitle"></h4>
+      <p id="galleryModalDescription"></p>
+    </div>
+  </div>
+</div>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <footer>
+        <p><i ></i> 2025 | Diseñado por: <a href="#" rel="sponsored" target="_parent">3° Informática</a></p>
+    </footer>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+        };
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+        $(window).scroll(function () {
+          checkSection();
+        });
+        // Funciones para los modales
+        function openModal(modalId) {
+          document.getElementById(modalId).style.display = 'block';
+          document.body.style.overflow = 'hidden'; // Previene scroll del body
+        }
+        function closeModal(modalId) {
+          document.getElementById(modalId).style.display = 'none';
+          document.body.style.overflow = 'auto'; // Restaura scroll del body
+        }
+        // Funciones para la galería
+        function openGalleryModal(imageSrc, title) {
+          const modal = document.getElementById('galleryModal');
+          const modalImg = document.getElementById('galleryModalImg');
+          const modalTitle = document.getElementById('galleryModalTitle');
+          const modalDescription = document.getElementById('galleryModalDescription');
+          modal.style.display = 'block';
+          modalImg.src = imageSrc;
+          modalTitle.textContent = title;
+          modalDescription.textContent = getImageDescription(title);
+          document.body.style.overflow = 'hidden';
+        }
+        function closeGalleryModal() {
+          document.getElementById('galleryModal').style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+        function getImageDescription(title) {
+      const descriptions = {
+        'Miss y Mister Juancho - Candidatos 2025': 'Los candidatos al título de Miss y Mister Juancho posan para la fotografía oficial del concurso 2025.',
+        'Miss y Mister Juancho - Desfile de Traje de Gala': 'Elegante desfile de traje de gala en el concurso Miss y Mister Juancho.',
+        'Miss y Mister Juancho - Ronda de Talentos': 'Los participantes demuestran sus habilidades especiales en la ronda de talentos.',
+        'Miss y Mister Juancho - Ronda de Preguntas': 'Momento decisivo donde los candidatos responden preguntas del jurado.',
+        'Miss y Mister Juancho - Ganadores 2025': 'Los ganadores del concurso Miss y Mister Juancho 2025 celebran su victoria.',
+        'Miss y Mister Juancho - Fotografía Grupal': 'Fotografía grupal de todos los participantes del concurso.',
+        'Miss y Mister Juancho - Celebración': 'Momento de celebración después del anuncio de los ganadores.',
+        'Día de la Juventud - Actividades Deportivas': 'Los estudiantes participan en emocionantes actividades deportivas durante el Día de la Juventud.',
+        'Día de la Juventud - Presentación Cultural': 'Presentaciones artísticas y culturales que destacan el talento juvenil.',
+        'Día de la Juventud - Juegos Tradicionales': 'Divertidos juegos tradicionales que fomentan la convivencia estudiantil.',
+        'Día de la Juventud - Concierto Estudiantil': 'Concierto en vivo con bandas y artistas estudiantiles.',
+        'Día de la Juventud - Feria Gastronómica': 'Feria gastronómica con deliciosos platillos preparados por los estudiantes.',
+        'Día de la Juventud - Ceremonia de Apertura': 'Ceremonia inaugural del Día de la Juventud con autoridades del colegio.',
+        'Día de la Juventud - Clausura': 'Ceremonia de clausura y premiación del Día de la Juventud.'
+      };
+      return descriptions[title] || 'Recuerdo especial de nuestros eventos escolares';
+    }
+        // Cerrar modal al hacer click fuera de él
+        window.onclick = function(event) {
+          const modals = ['modal1', 'modal2', 'modal3', 'modal4', 'modal5', 'modal6', 'modal7'];
+          modals.forEach(modalId => {
+            const modal = document.getElementById(modalId);
+            if (event.target === modal) {
+              closeModal(modalId);
+            }
+          });
+          // También para el modal de galería
+          const galleryModal = document.getElementById('galleryModal');
+          if (event.target === galleryModal) {
+            closeGalleryModal();
+          }
+        }
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            const modals = ['modal1', 'modal2', 'modal3', 'modal4', 'modal5', 'modal6', 'modal7'];
+            modals.forEach(modalId => {
+              closeModal(modalId);
+            });
+            closeGalleryModal();
+          }
+        });
+    </script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
+
+
+    
+              <script>
+                              
+              </script>
+                        </body>
+                        </html>
+                    
